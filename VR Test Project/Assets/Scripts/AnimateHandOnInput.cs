@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class AnimateHandOnInput : MonoBehaviour
 {
     public InputActionProperty pinchAnimationAction;
-    public InputActionProperty gripAnimationAction;
+    public InputActionProperty gribAnimationAction;
     public Animator handAnimator;
     void Start()
     {
@@ -19,7 +19,7 @@ public class AnimateHandOnInput : MonoBehaviour
         float triggerValue = pinchAnimationAction.action.ReadValue<float>();
         handAnimator.SetFloat("Trigger", triggerValue);
 
-        float gripValue = gripAnimationAction.action.ReadValue<float>();
-        handAnimator.SetFloat("Grip", gripValue);
+        float gripValue = gribAnimationAction.action.ReadValue<float>();
+        handAnimator.SetFloat("Grib", gripValue);
     }
 }
